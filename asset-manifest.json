@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/dv-prototype/static/css/main.dc5360de.chunk.css",
-    "main.js": "/dv-prototype/static/js/main.306ce649.chunk.js",
-    "main.js.map": "/dv-prototype/static/js/main.306ce649.chunk.js.map",
+    "main.css": "/dv-prototype/static/css/main.55bc2d59.chunk.css",
+    "main.js": "/dv-prototype/static/js/main.1384dafc.chunk.js",
+    "main.js.map": "/dv-prototype/static/js/main.1384dafc.chunk.js.map",
     "runtime-main.js": "/dv-prototype/static/js/runtime-main.ced0cf71.js",
     "runtime-main.js.map": "/dv-prototype/static/js/runtime-main.ced0cf71.js.map",
-    "static/js/2.ffac97f2.chunk.js": "/dv-prototype/static/js/2.ffac97f2.chunk.js",
-    "static/js/2.ffac97f2.chunk.js.map": "/dv-prototype/static/js/2.ffac97f2.chunk.js.map",
+    "static/js/2.3a50f932.chunk.js": "/dv-prototype/static/js/2.3a50f932.chunk.js",
+    "static/js/2.3a50f932.chunk.js.map": "/dv-prototype/static/js/2.3a50f932.chunk.js.map",
     "index.html": "/dv-prototype/index.html",
-    "static/css/main.dc5360de.chunk.css.map": "/dv-prototype/static/css/main.dc5360de.chunk.css.map",
-    "static/js/2.ffac97f2.chunk.js.LICENSE.txt": "/dv-prototype/static/js/2.ffac97f2.chunk.js.LICENSE.txt",
-    "static/media/november2020.1272c87a.csv": "/dv-prototype/static/media/november2020.1272c87a.csv"
+    "static/css/main.55bc2d59.chunk.css.map": "/dv-prototype/static/css/main.55bc2d59.chunk.css.map",
+    "static/js/2.3a50f932.chunk.js.LICENSE.txt": "/dv-prototype/static/js/2.3a50f932.chunk.js.LICENSE.txt",
+    "static/media/hospital-data.369a27f7.csv": "/dv-prototype/static/media/hospital-data.369a27f7.csv",
+    "static/media/overall-statistics.f979d527.csv": "/dv-prototype/static/media/overall-statistics.f979d527.csv"
   },
   "entrypoints": [
     "static/js/runtime-main.ced0cf71.js",
-    "static/js/2.ffac97f2.chunk.js",
-    "static/css/main.dc5360de.chunk.css",
-    "static/js/main.306ce649.chunk.js"
+    "static/js/2.3a50f932.chunk.js",
+    "static/css/main.55bc2d59.chunk.css",
+    "static/js/main.1384dafc.chunk.js"
   ]
 }
