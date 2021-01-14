@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+.container{
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cuprum{
+    font-family: 'Cuprum', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.brand-name{
+    font-size: 36px;
+    color: #eeeeee;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.brand-name:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-.App-link {
-  color: #61dafb;
+.brand-date{
+    font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top-nav{
+    width: 95%;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.button{
+    background-color: rgba(205, 208, 203, 1);
+    border-radius: 25px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.value{
+    background-color: #ffd369;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    height: 75%;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.bar{
+    width: 750px;
+    height: 750px;
+    color: #eeeeee;
+}
+
+.dropdown{
+    width: 750px;
+    height: 50px;
+    font-size: 21px;
+    color: #eeeeee;
+    vertical-align: middle;
+    margin: 25px;
+}
+
+.select-month{
+    margin-left: 25px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: #ffd369ee;
+    color: #393e46;
+    padding: 5px 15px 5px;
 }
