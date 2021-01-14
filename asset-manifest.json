@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/dv-prototype/static/css/main.4bfc1228.chunk.css",
-    "main.js": "/dv-prototype/static/js/main.a2a2b09d.chunk.js",
-    "main.js.map": "/dv-prototype/static/js/main.a2a2b09d.chunk.js.map",
+    "main.js": "/dv-prototype/static/js/main.8b1a6a3b.chunk.js",
+    "main.js.map": "/dv-prototype/static/js/main.8b1a6a3b.chunk.js.map",
     "runtime-main.js": "/dv-prototype/static/js/runtime-main.ced0cf71.js",
     "runtime-main.js.map": "/dv-prototype/static/js/runtime-main.ced0cf71.js.map",
-    "static/js/2.f1739a95.chunk.js": "/dv-prototype/static/js/2.f1739a95.chunk.js",
-    "static/js/2.f1739a95.chunk.js.map": "/dv-prototype/static/js/2.f1739a95.chunk.js.map",
+    "static/js/2.c89fa292.chunk.js": "/dv-prototype/static/js/2.c89fa292.chunk.js",
+    "static/js/2.c89fa292.chunk.js.map": "/dv-prototype/static/js/2.c89fa292.chunk.js.map",
     "index.html": "/dv-prototype/index.html",
     "static/css/main.4bfc1228.chunk.css.map": "/dv-prototype/static/css/main.4bfc1228.chunk.css.map",
-    "static/js/2.f1739a95.chunk.js.LICENSE.txt": "/dv-prototype/static/js/2.f1739a95.chunk.js.LICENSE.txt",
+    "static/js/2.c89fa292.chunk.js.LICENSE.txt": "/dv-prototype/static/js/2.c89fa292.chunk.js.LICENSE.txt",
     "static/media/hospital-data.cfebbe68.csv": "/dv-prototype/static/media/hospital-data.cfebbe68.csv",
     "static/media/overall-statistics.29c65aa3.csv": "/dv-prototype/static/media/overall-statistics.29c65aa3.csv"
   },
   "entrypoints": [
     "static/js/runtime-main.ced0cf71.js",
-    "static/js/2.f1739a95.chunk.js",
+    "static/js/2.c89fa292.chunk.js",
     "static/css/main.4bfc1228.chunk.css",
-    "static/js/main.a2a2b09d.chunk.js"
+    "static/js/main.8b1a6a3b.chunk.js"
   ]
 }
