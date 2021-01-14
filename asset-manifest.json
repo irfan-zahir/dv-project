@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/dv-prototype/static/css/main.f03f53c7.chunk.css",
-    "main.js": "/dv-prototype/static/js/main.797ed7f7.chunk.js",
-    "main.js.map": "/dv-prototype/static/js/main.797ed7f7.chunk.js.map",
+    "main.js": "/dv-prototype/static/js/main.b08c06b3.chunk.js",
+    "main.js.map": "/dv-prototype/static/js/main.b08c06b3.chunk.js.map",
     "runtime-main.js": "/dv-prototype/static/js/runtime-main.ced0cf71.js",
     "runtime-main.js.map": "/dv-prototype/static/js/runtime-main.ced0cf71.js.map",
-    "static/js/2.488198cf.chunk.js": "/dv-prototype/static/js/2.488198cf.chunk.js",
-    "static/js/2.488198cf.chunk.js.map": "/dv-prototype/static/js/2.488198cf.chunk.js.map",
+    "static/js/2.6d2791bf.chunk.js": "/dv-prototype/static/js/2.6d2791bf.chunk.js",
+    "static/js/2.6d2791bf.chunk.js.map": "/dv-prototype/static/js/2.6d2791bf.chunk.js.map",
     "index.html": "/dv-prototype/index.html",
     "static/css/main.f03f53c7.chunk.css.map": "/dv-prototype/static/css/main.f03f53c7.chunk.css.map",
-    "static/js/2.488198cf.chunk.js.LICENSE.txt": "/dv-prototype/static/js/2.488198cf.chunk.js.LICENSE.txt",
+    "static/js/2.6d2791bf.chunk.js.LICENSE.txt": "/dv-prototype/static/js/2.6d2791bf.chunk.js.LICENSE.txt",
     "static/media/hospital-data.cfebbe68.csv": "/dv-prototype/static/media/hospital-data.cfebbe68.csv",
     "static/media/overall-statistics.f979d527.csv": "/dv-prototype/static/media/overall-statistics.f979d527.csv"
   },
   "entrypoints": [
     "static/js/runtime-main.ced0cf71.js",
-    "static/js/2.488198cf.chunk.js",
+    "static/js/2.6d2791bf.chunk.js",
     "static/css/main.f03f53c7.chunk.css",
-    "static/js/main.797ed7f7.chunk.js"
+    "static/js/main.b08c06b3.chunk.js"
   ]
 }
