@@ -1,0 +1,53 @@
+import React, { useEffect, useState } from 'react'
+import { Doughnut } from 'react-chartjs-2'
+
+export default function ShowDeath({hospital}) {
+
+    //matiKCH,matiSIBU,matiBNTL,matiMIRI,matiSGB
+    const [ donutData, setDonutData ] = useState()
+
+    useEffect(()=>{
+        var data = []
+        hospital.forEach(value=>{
+            data[0] = value.matiKCH
+            data[1] = value.matiBNTL
+            data[2] = value.matiMIRI
+            data[3] = value.matiSGB
+        })
+
+        setDonutData({
+            maintainAspectRatio: true,
+            responsive: true,
+            labels: ["Kuching", "Bintulu", "Miri", "Sg. Buloh"],
+            datasets: [
+              {
+                data: data,
+                backgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4'],
+                hoverBackgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4']
+              }
+            ]
+        })
+    })
+
+    const options = {
+        legend: {
+          display: true,
+          position: "top",
+          labels:{
+              fontSize: 17,
+              fontColor: 'white'
+          }
+        },
+        elements: {
+          arc: {
+            borderWidth: 0
+          }
+        }
+    }
+
+    return (
+        <div style={{width:'500px', height: '500px', display:'flex', alignItems:'center'}}>
+            <Doughnut height={500} width={500} data={{...donutData, }} options={{...options}} />
+        </div>
+    )
+}

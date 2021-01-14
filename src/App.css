@@ -7,12 +7,16 @@
     padding: 25px;
 }
 
-.cuprum{
-    font-family: 'Cuprum', sans-serif;
+.mons{
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.lilita{
+    font-family: 'Lilita One', cursive;
 }
 
 .brand-name{
-    font-size: 36px;
+    font-size: 24px;
     color: #eeeeee;
     text-align: center;
     transition: transform 0.3s;
@@ -24,11 +28,11 @@
 }
 
 .brand-date{
-    font-size: 25px;
+    font-size: 19px;
 }
 
 .top-nav{
-    width: 95%;
+    width: 85%;
     height: 200px;
     margin: 20px;
     display: flex;
@@ -39,14 +43,15 @@
 
 .button{
     background-color: rgba(205, 208, 203, 1);
-    border-radius: 25px;
-    width: 200px;
-    height: 200px;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     transition: transform 0.3s;
+    font-size: 15px;
 }
 
 .button:hover{
@@ -55,25 +60,21 @@
 }
 
 .value{
-    background-color: #ffd369;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 35px;
+    font-size: 25px;
     height: 75%;
     width: 100%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 10px;
+    font-size: 50px;
 }
 
 .bar{
     width: 750px;
     height: 750px;
-    color: #eeeeee;
 }
 
 .dropdown{
@@ -85,13 +86,30 @@
     margin: 25px;
 }
 
-.select-month{
-    margin-left: 25px;
-    font-size: 17px;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    background-color: #ffd369ee;
-    color: #393e46;
-    padding: 5px 15px 5px;
+.default-chart-container{
+    width: 500px;
+    height: 450px;
+    margin: 15px;
+}
+
+.monthly{
+    width: 100px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 25px;
+    background-color: #30475e;
+    transition: transform 0.3s;
+}
+
+.monthly:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.default-chart{
+    margin: 5px;
+    height: 300px;
 }
