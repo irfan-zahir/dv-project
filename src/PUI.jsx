@@ -13,7 +13,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
         console.log(att)
         var data = []
         switch (att) {
-            case 'Confirmed Cases':
+            case 'New Cases':
                 overall.forEach(row=>{
                     var m = parseInt(row.Tarikh.split('/')[1])-6
                     if(m == month){
@@ -29,7 +29,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
                     }
                 })
             break;
-            case 'Total Cases':
+            case 'Total':
                 overall.forEach(row=>{
                     var m = parseInt(row.Tarikh.split('/')[1])-6
                     if(m == month){
@@ -57,12 +57,16 @@ export default function PUI({overall, labelMonth, label_daily}) {
     }
     
     useEffect(()=>{
-        var dataPUI = [], dataNPUI = [], dataPUIB = []
+        var dataPUI = [], dataNPUI = [], dataPUIB = [0, 0, 0, 0, 0, 0, 0]
         overall.forEach(value=>{
             var month = parseInt(value.Tarikh.split('/')[1]-6)
             dataPUI[month] = value.jumlahKesPUI
             dataNPUI[month] = value.kesPUINegatif
-            dataPUIB[month] = value.kesPUIBaru
+            dataPUIB[month] += parseInt(value.kesPUIBaru)
+        })
+
+        dataPUIB.forEach((value, index)=>{
+            dataPUIB[index] = parseInt(value / label_daily(index).length)
         })
         
         setMonthlyChart({
@@ -72,7 +76,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
                 type:'line',
                 fill: true,
                 yAxisID: 'l',
-                label: 'Confirmed Cases',
+                label: 'New Cases',
                 data: dataPUIB,
                 backgroundColor: 'rgba(187, 34, 5, 1)',
                 borderColor: 'rgba(187, 34, 5, 1)',
@@ -89,7 +93,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
             {
                 type:'line',
                 fill: true,
-                label: 'Total Cases',
+                label: 'Total',
                 data: dataPUI,
                 yAxisID: 'r',
                 backgroundColor: 'rgba(255, 123, 84, 1)',
@@ -142,7 +146,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
                         fontColor: 'white'
                     },
                     gridLines:{
-                        color: 'white'
+                        color: '#393e46'
                     }
                 },
                 {
@@ -154,7 +158,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
                         fontColor: 'white'
                     },
                     gridLines:{
-                        color: 'white'
+                        color: '#393e46'
                     }
                 },
             ],
@@ -164,7 +168,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }]
         } 
@@ -194,7 +198,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
                         fontColor: 'white'
                     },
                     gridLines:{
-                        color: 'white'
+                        color: '#393e46'
                     }
                 },
             ],
@@ -204,19 +208,23 @@ export default function PUI({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }]
         } 
     }
 
     function return_monthly(){
-        var dataPUI = [], dataNPUI = [], dataPUIB = []
+        var dataPUI = [], dataNPUI = [], dataPUIB = [0, 0, 0, 0, 0, 0, 0]
         overall.forEach(value=>{
             var month = parseInt(value.Tarikh.split('/')[1]-6)
             dataPUI[month] = value.jumlahKesPUI
             dataNPUI[month] = value.kesPUINegatif
-            dataPUIB[month] = value.kesPUIBaru
+            dataPUIB[month] += parseInt(value.kesPUIBaru)
+        })
+
+        dataPUIB.forEach((value, index)=>{
+            dataPUIB[index] = parseInt(value / label_daily(index).length)
         })
         
         setMonthlyChart({
@@ -226,7 +234,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
                 type:'line',
                 fill: true,
                 yAxisID: 'l',
-                label: 'Confirmed Cases',
+                label: 'New Cases',
                 data: dataPUIB,
                 backgroundColor: 'rgba(187, 34, 5, 1)',
                 borderColor: 'rgba(187, 34, 5, 1)',
@@ -243,7 +251,7 @@ export default function PUI({overall, labelMonth, label_daily}) {
             {
                 type:'line',
                 fill: true,
-                label: 'Total Cases',
+                label: 'Total',
                 data: dataPUI,
                 yAxisID: 'r',
                 backgroundColor: 'rgba(255, 123, 84, 1)',

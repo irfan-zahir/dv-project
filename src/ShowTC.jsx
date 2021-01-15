@@ -40,7 +40,7 @@ export default function ShowTC({overall, labelMonth, label_daily}) {
         overall.forEach(value=>{
             var month = parseInt(value.Tarikh.split('/')[1]-6)
             console.log(value)
-            mpostives[month] += parseInt(value.jumlahKesPositif)
+            mpostives[month] = parseInt(value.jumlahKesPositif)
         })
         
         setMonthlyChart({
@@ -85,7 +85,7 @@ export default function ShowTC({overall, labelMonth, label_daily}) {
             display: true,
             text: 'Total Positive Cases',
             fontColor: 'white',
-            fontSize: 17
+            fontSize: 17,
         },
         legend: {
             labels: {
@@ -100,7 +100,7 @@ export default function ShowTC({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }],
             xAxes: [{
@@ -109,7 +109,7 @@ export default function ShowTC({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }]
         } 
@@ -135,7 +135,7 @@ export default function ShowTC({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }],
             xAxes: [{
@@ -144,7 +144,7 @@ export default function ShowTC({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }]
         } 

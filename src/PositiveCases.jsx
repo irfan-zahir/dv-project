@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Bar } from 'react-chartjs-2'
 
-export default function PositiveCases({overall, labelMonth, label_daily}) {
+export default function PositiveCases({overall, hospital, labelMonth, label_daily}) {
 
     const [ isDaily, setDaily ] = useState()
     const [ dailyChart , setDailyChart ] = useState()
@@ -37,12 +37,16 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
     
     useEffect(()=>{
         var mpostives = [0, 0, 0, 0, 0, 0, 0]
-        var recovered = []
         overall.forEach(value=>{
             var month = parseInt(value.Tarikh.split('/')[1]-6)
             mpostives[month] += parseInt(value.kesPositifBaru)
-            recovered[month] = value.jumlahTelahSembuhDiscaj
             
+        })
+
+        var recovered = [0, 0, 0, 0, 0, 0, 0]
+        hospital.forEach(value=>{
+            var month = parseInt(value.Tarikh.split('/')[1]-6)
+            recovered[month] += parseInt(value.discajJumlah)
         })
         
         setMonthlyChart({
@@ -50,8 +54,9 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
           datasets: [
             {
                 type:'line',
-                fill: true,
+                fill: false,
                 yAxisID: 'l',
+                tension: 0,
                 label: 'New Postive Cases',
                 data: mpostives,
                 backgroundColor: 'rgba(255, 211, 105, 1)',
@@ -61,7 +66,7 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
                 type:'bar',
                 fill: true,
                 yAxisID: 'r',
-                label: 'Total Recovered',
+                label: 'New Recovery',
                 data: recovered,
                 backgroundColor: 'rgba(22, 199, 154, 1)',
                 borderColor: 'rgba(22, 199, 154, 1)'
@@ -69,7 +74,7 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
           ]
         })
         setDaily(false)
-        setChartTitle('New Positive Cases')
+        setChartTitle('New Positive Cases vs')
     }, [])
 
 
@@ -96,7 +101,7 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
         },
         title: {
             display: true,
-            text: 'New Postive Cases',
+            text: 'New Postive Cases vs New Recovery',
             fontColor: 'white',
             fontSize: 17
         },
@@ -116,7 +121,7 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
                         fontColor: 'white'
                     },
                     gridLines:{
-                        color: 'white'
+                        color: '#393e46'
                     }
                 },
                 {
@@ -127,7 +132,7 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
                         fontColor: 'white'
                     },
                     gridLines:{
-                        color: 'white'
+                        color: '#393e46'
                     }
                 }
             ],
@@ -138,7 +143,7 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
                         fontColor: 'white'
                     },
                     gridLines:{
-                        color: 'white'
+                        color: '#393e46'
                     }
                 }
             ]
@@ -165,7 +170,7 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }],
             xAxes: [{
@@ -174,7 +179,7 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }]
         } 
@@ -207,7 +212,7 @@ export default function PositiveCases({overall, labelMonth, label_daily}) {
                 type:'bar',
                 fill: true,
                 yAxisID: 'r',
-                label: 'Total Recovered',
+                label: 'New Recovery',
                 data: recovered,
                 backgroundColor: 'rgba(22, 199, 154, 1)',
                 borderColor: 'rgba(22, 199, 154, 1)'

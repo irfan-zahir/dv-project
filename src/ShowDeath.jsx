@@ -30,9 +30,15 @@ export default function ShowDeath({hospital}) {
     })
 
     const options = {
+      title: {
+          display: true,
+          text: 'Death Cases',
+          fontColor: 'white',
+          fontSize: 17
+      },
         legend: {
           display: true,
-          position: "top",
+          position: "right",
           labels:{
               fontSize: 17,
               fontColor: 'white'
@@ -47,7 +53,7 @@ export default function ShowDeath({hospital}) {
 
     return (
         <div style={{width:'500px', height: '500px', display:'flex', alignItems:'center'}}>
-            <Doughnut height={500} width={500} data={{...donutData, }} options={{...options}} />
+            <Doughnut height={200} data={{...donutData, }} options={{...options}} />
         </div>
     )
 }

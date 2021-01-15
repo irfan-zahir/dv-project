@@ -96,7 +96,7 @@ export default function ShowPending({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }],
             xAxes: [{
@@ -105,7 +105,7 @@ export default function ShowPending({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }]
         } 
@@ -131,7 +131,7 @@ export default function ShowPending({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }],
             xAxes: [{
@@ -140,7 +140,7 @@ export default function ShowPending({overall, labelMonth, label_daily}) {
                     fontColor: 'white'
                 },
                 gridLines:{
-                    color: 'white'
+                    color: '#393e46'
                 }
             }]
         } 

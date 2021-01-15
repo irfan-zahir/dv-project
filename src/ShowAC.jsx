@@ -31,9 +31,15 @@ export default function ShowAC({hospital}) {
     }, [])
 
     const options = {
+        title: {
+            display: true,
+            text: 'Patient In Treatment',
+            fontColor: 'white',
+            fontSize: 17
+        },
         legend: {
           display: true,
-          position: "top",
+          position: "right",
           labels:{
               fontSize: 17,
               fontColor: 'white'
@@ -47,8 +53,8 @@ export default function ShowAC({hospital}) {
     }
 
     return (
-        <div style={{width:'500px', height: '500px', display:'flex', alignItems:'center'}}>
-            <Pie height={500} width={500}  data={pieData} options={options} />
+        <div style={{width:'500px', height: '500px', display:'flex', justifyContent:'start', alignItems:'center'}}>
+            <Pie height={200}  data={pieData} options={options} />
         </div>
     )
 }

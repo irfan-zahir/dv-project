@@ -171,7 +171,7 @@ function App() {
       <div className='default' style={{display: isDefault ? 'flex' : 'none', flexDirection:'column'}}>
         <div className='row-1' style={{display: 'flex', flexDirection: 'row'}}>
             <div className='default-chart new-cases'>
-              { isDefault && <PositiveCases overall={overall} labelMonth={labelMonth} label_daily={label_daily} />}
+              { isDefault && <PositiveCases overall={overall} hospital={hospital} labelMonth={labelMonth} label_daily={label_daily} />}
             </div>
             <div className='default-chart pui'>
               { isDefault && <PUI overall={overall} labelMonth={labelMonth} label_daily={label_daily} />}
