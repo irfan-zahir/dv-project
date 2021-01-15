@@ -201,8 +201,9 @@ export default function PositiveCases({overall, hospital, labelMonth, label_dail
           datasets: [
             {
                 type:'line',
-                fill: true,
+                fill: false,
                 yAxisID: 'l',
+                tension: 0,
                 label: 'New Postive Cases',
                 data: mpostives,
                 backgroundColor: 'rgba(255, 211, 105, 1)',
