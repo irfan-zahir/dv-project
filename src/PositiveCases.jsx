@@ -188,12 +188,17 @@ export default function PositiveCases({overall, hospital, labelMonth, label_dail
     function return_monthly(){
         setDailyChart()
         var mpostives = [0, 0, 0, 0, 0, 0, 0]
-        var recovered = []
+        var recovered = [0, 0, 0, 0, 0, 0, 0]
         overall.forEach(value=>{
             var month = parseInt(value.Tarikh.split('/')[1]-6)
             mpostives[month] += parseInt(value.kesPositifBaru)
-            recovered[month] = value.jumlahTelahSembuhDiscaj
             
+        })
+
+        var recovered = [0, 0, 0, 0, 0, 0, 0]
+        hospital.forEach(value=>{
+            var month = parseInt(value.Tarikh.split('/')[1]-6)
+            recovered[month] += parseInt(value.discajJumlah)
         })
         
         setMonthlyChart({

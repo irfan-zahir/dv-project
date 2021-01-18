@@ -13,17 +13,18 @@ export default function ShowAC({hospital}) {
             data[1] = value.dirawatBNTL
             data[2] = value.dirawatMIRI
             data[3] = value.dirawatSGB
+            data[4] = value.dirawatSIBU
         })
 
         setPieData({
             maintainAspectRatio: true,
             responsive: true,
-            labels: ["Kuching", "Bintulu", "Miri", "Sg. Buloh"],
+            labels: ["Kuching", "Bintulu", "Miri", "Sg. Buloh" , "Sibu"],
             datasets: [
               {
                 data: data,
-                backgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4'],
-                hoverBackgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4']
+                backgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4', '#433520'],
+                hoverBackgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4', '#433520']
               }
             ]
         })
@@ -33,7 +34,7 @@ export default function ShowAC({hospital}) {
     const options = {
         title: {
             display: true,
-            text: 'Patient In Treatment',
+            text: 'Active Cases in Hospitals',
             fontColor: 'white',
             fontSize: 17
         },

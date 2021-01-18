@@ -7,23 +7,24 @@ export default function ShowDeath({hospital}) {
     const [ donutData, setDonutData ] = useState()
 
     useEffect(()=>{
-        var data = []
+        var data = [0 , 0, 0, 0, 0]
         hospital.forEach(value=>{
             data[0] = value.matiKCH
             data[1] = value.matiBNTL
             data[2] = value.matiMIRI
             data[3] = value.matiSGB
+            data[4] = value.matiSIBU
         })
 
         setDonutData({
             maintainAspectRatio: true,
             responsive: true,
-            labels: ["Kuching", "Bintulu", "Miri", "Sg. Buloh"],
+            labels: ["Kuching", "Bintulu", "Miri", "Sg. Buloh" , "Sibu"],
             datasets: [
               {
                 data: data,
-                backgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4'],
-                hoverBackgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4']
+                backgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4', '#433520'],
+                hoverBackgroundColor: ['#f0a500', '#006a71', '#e97171', '#5d54a4', '#433520']
               }
             ]
         })
